@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.868);
+}
+#main {
+  background: linear-gradient(rgb(35, 33, 33), rgb(21, 8, 52));
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+#WeatherApp {
+  z-index: 1;
+  flex-grow: 1;
+  max-width: 400px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+#WeatherApp #nav-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+  /* gap: 60px; */
+}
+#WeatherApp #nav-content #search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#WeatherApp #nav-content #search-field #city-location {
+  display: flex;
+}
+#WeatherApp #nav-content #search-field #city-location p {
+  font-size: 30px;
+  cursor: pointer;
+}
+#WeatherApp #nav-content #search-field #input-field {
+  display: none;
+}
+#WeatherApp #nav-content #search-field #input-field input {
+  font-size: 15px;
+  color: white;
+  height: 35px;
+  width: 210px;
+  flex-grow: 1;
+  max-width: 210px;
+  min-width: 100px;
+  display: flex;
+  padding: 0px 35px 0px 10px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.199);
+  border-bottom: 1px solid rgb(157, 157, 157);
+}
+#WeatherApp #nav-content #search-field #input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.529);
+}
+#WeatherApp #nav-content #search-field #input-field img {
+  position: relative;
+  left: -25px;
+  top: 10px;
+  height: 15px;
+  cursor: pointer;
+}
+#WeatherApp #nav-content #date-time p {
+  font-size: 17px;
+}
+#WeatherApp #temperature-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  /* border: 1px solid white; */
+}
+#WeatherApp #temperature-section #degrees {
+  font-size: 50px;
+}
+#WeatherApp #temperature-section #temp-condition {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+#WeatherApp #air-quality-section {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2px;
+  /* border: 1px solid white; */
+  border-radius: 8px;
+  backdrop-filter: brightness(0.7);
+}
+#WeatherApp #air-quality-section #indicate {
+  font-size: 13px;
+  margin-top: 20px;
+}
+#WeatherApp #air-quality-section #title {
+  width: 100%;
+  padding: 0px 0px 5px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.174);
+}
+#WeatherApp #air-quality-section #bar {
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background: linear-gradient(
+    to right,
+    rgb(0, 255, 0),
+    rgb(255, 247, 86),
+    rgb(255, 0, 0)
+  );
+}
+#WeatherApp #other-info-section {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  /* border: 1px solid white; */
+}
+#WeatherApp #other-info-section .blocks {
+  height: 100px;
+  width: 170px;
+  flex-grow: 1;
+  max-width: 200px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px white;
+  backdrop-filter: brightness(0.7);
+}
+#WeatherApp > #form > #temperature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #WeatherApp #nav-content #search-field #city-location p {
+    font-size: 25px;
+  }
+  #WeatherApp #nav-content #date-time p {
+    font-size: 16px;
+  }
+  #WeatherApp #nav-content #search-field #input-field input {
+    width: 45%;
+  }
+  #WeatherApp #temperature-section #degrees {
+    font-size: 45px;
+  }
+  #WeatherApp #temperature-section #temp-condition p {
+    font-size: 16px;
+  }
+  #WeatherApp #air-quality-section p{
+    font-size: 16px;
+  }
+  #WeatherApp #other-info-section .blocks {
+    width: 45%; /* Two blocks per row */
+    height: 90px;
+  }
+}
+
+@media (max-width: 440px) {
+    #WeatherApp #nav-content #search-field #city-location p {
+    font-size: 20px;
+  }
+  #WeatherApp #nav-content #date-time p {
+    font-size: 15px;
+  }
+  #WeatherApp #temperature-section #degrees {
+    font-size: 40px;
+  }
+  #WeatherApp #temperature-section #temp-condition p {
+    font-size: 15px;
+  }
+  #WeatherApp #air-quality-section p{
+    font-size: 15px;
+  }
+  #WeatherApp #other-info-section .blocks {
+    font-size: 14px;
+  }
+}
