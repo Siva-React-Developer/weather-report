@@ -82,8 +82,10 @@ body {
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.199);
   border-bottom: 1px solid rgb(157, 157, 157);
+  font-family: "Roboto", sans-serif;
 }
 #WeatherApp #nav-content #search-field #input-field #Input::placeholder {
+  font-family: "Roboto", sans-serif;
   color: rgb(88, 88, 88);
 }
 /* .placeholder-gray::placeholder {
