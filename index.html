@@ -2,10 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#24243e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Weather-Report</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="website icon" href="sunny.png" for="png" />
+    <link rel="icon" href="sunny_web_icon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="main">
@@ -14,7 +26,7 @@
         <div id="nav-content">
           <div id="search-field">
             <div id="city-location">
-              <img src="" alt="" />
+              <img id="gps-icon" src="gps_icon.png" alt="" />
               <p id="cityname" onclick="get_input_field()">Cityname</p>
             </div>
             <div id="input-field">

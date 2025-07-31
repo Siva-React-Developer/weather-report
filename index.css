@@ -24,7 +24,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   z-index: -1;
@@ -45,7 +45,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   /* border: 1px solid white; */
-  /* gap: 60px; */
+  gap: 10px;
 }
 #WeatherApp #nav-content #search-field {
   display: flex;
@@ -54,6 +54,11 @@ body {
 }
 #WeatherApp #nav-content #search-field #city-location {
   display: flex;
+}
+#WeatherApp #nav-content #search-field #city-location img {
+  height: 40px;
+  width: 40px;
+  margin-top: -3px;
 }
 #WeatherApp #nav-content #search-field #city-location p {
   font-size: 30px;
@@ -64,7 +69,7 @@ body {
 }
 #WeatherApp #nav-content #search-field #input-field input {
   font-size: 15px;
-  color: white;
+  color: rgb(233, 233, 233);
   height: 35px;
   width: 210px;
   flex-grow: 1;
@@ -78,9 +83,18 @@ body {
   background-color: rgba(255, 255, 255, 0.199);
   border-bottom: 1px solid rgb(157, 157, 157);
 }
-#WeatherApp #nav-content #search-field #input-field input::placeholder {
-  color: rgba(255, 255, 255, 0.529);
+#WeatherApp #nav-content #search-field #input-field #Input::placeholder {
+  color: rgb(88, 88, 88);
 }
+/* .placeholder-gray::placeholder {
+  color: black;
+}
+.placeholder-gray::-webkit-input-placeholder {
+  color: black;
+}
+.placeholder-gray::-moz-placeholder {
+  color: black;
+} */
 #WeatherApp #nav-content #search-field #input-field img {
   position: relative;
   left: -25px;
@@ -119,7 +133,7 @@ body {
   gap: 2px;
   /* border: 1px solid white; */
   border-radius: 8px;
-  backdrop-filter: brightness(0.7);
+  backdrop-filter: brightness(0.5);
 }
 #WeatherApp #air-quality-section #indicate {
   font-size: 13px;
@@ -163,8 +177,8 @@ body {
   justify-content: center;
   gap: 4px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px white;
-  backdrop-filter: brightness(0.7);
+  /* box-shadow: 0px 0px 10px white; */
+  backdrop-filter: brightness(0.5);
 }
 #WeatherApp > #form > #temperature {
   display: flex;
@@ -188,7 +202,7 @@ body {
   #WeatherApp #temperature-section #temp-condition p {
     font-size: 16px;
   }
-  #WeatherApp #air-quality-section p{
+  #WeatherApp #air-quality-section p {
     font-size: 16px;
   }
   #WeatherApp #other-info-section .blocks {
@@ -198,7 +212,12 @@ body {
 }
 
 @media (max-width: 440px) {
-    #WeatherApp #nav-content #search-field #city-location p {
+  #WeatherApp #nav-content #search-field #city-location img {
+    height: 30px;
+    width: 30px;
+    margin-top: -3px;
+  }
+  #WeatherApp #nav-content #search-field #city-location p {
     font-size: 20px;
   }
   #WeatherApp #nav-content #date-time p {
@@ -210,7 +229,7 @@ body {
   #WeatherApp #temperature-section #temp-condition p {
     font-size: 15px;
   }
-  #WeatherApp #air-quality-section p{
+  #WeatherApp #air-quality-section p {
     font-size: 15px;
   }
   #WeatherApp #other-info-section .blocks {
