@@ -164,7 +164,7 @@ async function get_location_weather() {
     try {
       let city = input.value.trim();
       let curr_pos_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=1cb6532aea3c298a830a71380eace21e`;
-      const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=1cb6532aea3c298a830a71380eace21e`;
+      const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=1cb6532aea3c298a830a71380eace21e`;
       const geoRes = await fetch(geoURL);
       const geoData = await geoRes.json();
       // console.log(geoData);
