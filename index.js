@@ -192,4 +192,5 @@ async function get_location_weather() {
       location.reload();
     }
   }
+  input.value = "";
 }
