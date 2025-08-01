@@ -86,17 +86,8 @@ body {
 }
 #WeatherApp #nav-content #search-field #input-field #Input::placeholder {
   font-family: "Roboto", sans-serif;
-  color: rgb(88, 88, 88);
+  color: rgb(40, 40, 40);
 }
-/* .placeholder-gray::placeholder {
-  color: black;
-}
-.placeholder-gray::-webkit-input-placeholder {
-  color: black;
-}
-.placeholder-gray::-moz-placeholder {
-  color: black;
-} */
 #WeatherApp #nav-content #search-field #input-field img {
   position: relative;
   left: -25px;

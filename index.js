@@ -55,9 +55,9 @@ async function fetching_weather(all_urls, air_quality_url) {
     let temp = data.main?.temp ?? 0;
     if (temp <= 20) {
       BackgroundVideo.src = "rainy.mp4";
-    } else if (temp > 20 && temp <= 25) {
+    } else if (temp > 20 && temp <= 24) {
       BackgroundVideo.src = "little_bit_rainy.mp4";
-    } else if (temp > 25 && temp <= 30) {
+    } else if (temp > 24 && temp <= 28) {
       BackgroundVideo.src = "normal_cloudy.mp4";
     } else {
       BackgroundVideo.src = "sunlight.mp4";
@@ -65,15 +65,14 @@ async function fetching_weather(all_urls, air_quality_url) {
       document.getElementById("gps-icon").style.height = "25px";
       document.getElementById("gps-icon").style.width = "25px";
       document.getElementById("gps-icon").style.marginTop = "5px";
+      input.style.color = "black";
       CityName.style.color = "black";
       Degrees.style.color = "black";
       AirQuality1.style.color = "black";
       document.getElementById("condition").style.color = "black";
       document.getElementById("air-quality").style.color = "black";
-      input.classList.add("placeholder-black");
       Day.style.color = "black";
       Time.style.color = "black";
-      // input.classList.add("placeholder-gray");
       if (window.matchMedia("(max-width: 440px)").matches) {
         document.getElementById("gps-icon").style.height = "17px";
         document.getElementById("gps-icon").style.width = "17px";
@@ -98,12 +97,21 @@ async function fetching_weather(all_urls, air_quality_url) {
       } else if (aqi === 2) {
         AirMessege.textContent = "Air quality is fair.";
         IndicationMark.style.transform = "translateX(130px)";
+        if (window.matchMedia("(max-width: 440px)").matches) {
+          IndicationMark.style.transform = "translateX(90px)";
+        }
       } else if (aqi === 3) {
         AirMessege.textContent = "Air quality is moderate.";
         IndicationMark.style.transform = "translateX(240px)";
+        if (window.matchMedia("(max-width: 440px)").matches) {
+          IndicationMark.style.transform = "translateX(160px)";
+        }
       } else if (aqi === 4) {
         AirMessege.textContent = "Air quality is poor.";
         IndicationMark.style.transform = "translateX(350px)";
+        if (window.matchMedia("(max-width: 440px)").matches) {
+          IndicationMark.style.transform = "translateX(210px)";
+        }
       }
     } catch (airErr) {
       console.warn("Failed to fetch air quality data:", airErr);
@@ -135,14 +143,17 @@ async function getWeatherByLocation() {
           month: "long",
           day: "numeric",
         };
-        let time = now.toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        });
-
+        function updateTime() {
+          const now = new Date();
+          let time = now.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          Time.textContent = time;
+        }
+        updateTime();
+        setInterval(updateTime, 60000);
         Day.textContent = now.toLocaleDateString(undefined, options);
-        Time.textContent = time;
         let curr_pos_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=1cb6532aea3c298a830a71380eace21e`;
         let curr_air_quality_url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1cb6532aea3c298a830a71380eace21e`;
         fetching_weather(curr_pos_url, curr_air_quality_url);
