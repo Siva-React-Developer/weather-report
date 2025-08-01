@@ -97,13 +97,13 @@ async function fetching_weather(all_urls, air_quality_url) {
         IndicationMark.style.transform = "translateX(20px)";
       } else if (aqi === 2) {
         AirMessege.textContent = "Air quality is fair.";
-        IndicationMark.style.transform = "translateX(40px)";
+        IndicationMark.style.transform = "translateX(130px)";
       } else if (aqi === 3) {
         AirMessege.textContent = "Air quality is moderate.";
-        IndicationMark.style.transform = "translateX(60px)";
+        IndicationMark.style.transform = "translateX(240px)";
       } else if (aqi === 4) {
         AirMessege.textContent = "Air quality is poor.";
-        IndicationMark.style.transform = "translateX(80px)";
+        IndicationMark.style.transform = "translateX(350px)";
       }
     } catch (airErr) {
       console.warn("Failed to fetch air quality data:", airErr);
