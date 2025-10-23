@@ -25,6 +25,7 @@ function get_input_field() {
 const input_field = document.getElementById("Input");
 input_field.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
+    input.blur();
     get_location_weather(); // Call your function
     input.value = "";
   }
@@ -169,6 +170,7 @@ async function getWeatherByLocation() {
 }
 
 async function get_location_weather() {
+  input.blur();
   if (input.value.trim() === "") {
     alert("Please enter a city name.");
   } else {
