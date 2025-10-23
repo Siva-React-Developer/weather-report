@@ -146,10 +146,11 @@ async function getWeatherByLocation() {
         };
         function updateTime() {
           const now = new Date();
-          let time = now.toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+          let time = now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true, // <-- Force 12-hour format with AM/PM
+        });
           Time.textContent = time;
         }
         updateTime();
