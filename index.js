@@ -141,7 +141,7 @@ async function fetching_weather(all_urls, air_quality_url) {
         AirMessege.textContent = "Air quality is poor.";
         IndicationMark.style.transform = "translateX(350px)";
         if (window.matchMedia("(max-width: 440px)").matches) {
-          IndicationMark.style.transform = "translateX(235px)";
+          IndicationMark.style.transform = "translateX(265px)";
         }
       }
     } catch (airErr) {
