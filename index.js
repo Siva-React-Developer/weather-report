@@ -54,7 +54,7 @@ async function fetching_weather(all_urls, air_quality_url) {
 
     // Background theme based on Weather API main value
     // let temp = data.main?.temp ?? 0;
-    let cityCondition = data.weather?.[0]?.description?.toLowerCase() ?? "";
+    let cityCondition = data.weather?.[0]?.main?.toLowerCase() ?? "";
     if (cityCondition == "snow"){
       BackgroundVideo.src = "little_bit_rainy.mp4";
     }
