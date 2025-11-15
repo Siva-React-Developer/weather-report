@@ -84,32 +84,6 @@ async function fetching_weather(all_urls, air_quality_url) {
     else if (cityCondition == "rain"){
       BackgroundVideo.src = "rainy.mp4";
     }
-    // if (temp <= 20) {
-    //   BackgroundVideo.src = "rainy.mp4";
-    // } else if (temp > 20 && temp <= 24) {
-    //   BackgroundVideo.src = "little_bit_rainy.mp4";
-    // } else if (temp > 24 && temp <= 28) {
-    //   BackgroundVideo.src = "normal_cloudy.mp4";
-    // } else {
-    //   BackgroundVideo.src = "sunlight.mp4";
-    //   document.getElementById("gps-icon").src = "gps.png";
-    //   document.getElementById("gps-icon").style.height = "25px";
-    //   document.getElementById("gps-icon").style.width = "25px";
-    //   document.getElementById("gps-icon").style.marginTop = "5px";
-    //   input.style.color = "black";
-    //   CityName.style.color = "black";
-    //   Degrees.style.color = "black";
-    //   AirQuality1.style.color = "black";
-    //   document.getElementById("condition").style.color = "black";
-    //   document.getElementById("air-quality").style.color = "black";
-    //   Day.style.color = "black";
-    //   Time.style.color = "black";
-    //   if (window.matchMedia("(max-width: 440px)").matches) {
-    //     document.getElementById("gps-icon").style.height = "17px";
-    //     document.getElementById("gps-icon").style.width = "17px";
-    //     document.getElementById("gps-icon").style.marginTop = "3px";
-    //   }
-    // }
 
     // Fetch air quality data separately
     try {
