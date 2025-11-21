@@ -56,7 +56,7 @@ async function fetching_weather(all_urls, air_quality_url) {
     // let temp = data.main?.temp ?? 0;
     let cityCondition = data.weather?.[0]?.main?.toLowerCase() ?? "";
     if (cityCondition == "snow" || cityCondition == "haze" || cityCondition == "fog" || cityCondition == "mist"){
-      
+      BackgroundVideo.src = "Snow.mp4";
     }
     else if (cityCondition == "clouds"){
       BackgroundVideo.src = "normal_cloudy.mp4";
@@ -88,7 +88,7 @@ async function fetching_weather(all_urls, air_quality_url) {
       BackgroundVideo.src = "little_bit_rainy.mp4";
     }
     else if (cityCondition == "thunderstorm"){
-      BackgroundVideo.src = "rainy.mp4";
+      BackgroundVideo.src = "Thunder.mp4";
     }
 
     // Fetch air quality data separately
