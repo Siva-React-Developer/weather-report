@@ -56,7 +56,7 @@ async function fetching_weather(all_urls, air_quality_url) {
     // let temp = data.main?.temp ?? 0;
     let cityCondition = data.weather?.[0]?.main?.toLowerCase() ?? "";
     if (cityCondition == "snow" || cityCondition == "haze" || cityCondition == "fog" || cityCondition == "mist"){
-      BackgroundVideo.src = "little_bit_rainy.mp4";
+      
     }
     else if (cityCondition == "clouds"){
       BackgroundVideo.src = "normal_cloudy.mp4";
@@ -81,7 +81,13 @@ async function fetching_weather(all_urls, air_quality_url) {
         document.getElementById("gps-icon").style.marginTop = "3px";
       }
     }
-    else if (cityCondition == "rain" || cityCondition == "drizzle" || cityCondition == "thunderstorm"){
+    else if (cityCondition == "rain"){
+      BackgroundVideo.src = "rainy.mp4";
+    }
+    else if (cityCondition == "drizzle"){
+      BackgroundVideo.src = "little_bit_rainy.mp4";
+    }
+    else if (cityCondition == "thunderstorm"){
       BackgroundVideo.src = "rainy.mp4";
     }
 
