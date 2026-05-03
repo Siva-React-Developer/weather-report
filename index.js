@@ -67,14 +67,14 @@ async function fetching_weather(all_urls, air_quality_url) {
       document.getElementById("gps-icon").style.height = "25px";
       document.getElementById("gps-icon").style.width = "25px";
       document.getElementById("gps-icon").style.marginTop = "5px";
-      input.style.color = "black";
-      CityName.style.color = "black";
-      Degrees.style.color = "black";
-      AirQuality1.style.color = "black";
-      document.getElementById("condition").style.color = "black";
-      document.getElementById("air-quality").style.color = "black";
-      Day.style.color = "black";
-      Time.style.color = "black";
+      input.style.color = "white";
+      CityName.style.color = "white";
+      Degrees.style.color = "white";
+      AirQuality1.style.color = "white";
+      document.getElementById("condition").style.color = "white";
+      document.getElementById("air-quality").style.color = "white";
+      Day.style.color = "white";
+      Time.style.color = "white";
       if (window.matchMedia("(max-width: 440px)").matches) {
         document.getElementById("gps-icon").style.height = "17px";
         document.getElementById("gps-icon").style.width = "17px";
